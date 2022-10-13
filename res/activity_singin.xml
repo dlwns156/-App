@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".singin"
+    android:id="@+id/singin_dra">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/Login_View"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:background="@color/PaleTurquoise"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </View>
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="81dp"
+            android:layout_height="105dp"
+            android:layout_marginEnd="36dp"
+            android:background="@drawable/ww"
+            app:layout_constraintBottom_toBottomOf="@+id/Login_View"
+            app:layout_constraintEnd_toEndOf="@+id/Login_View"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.355" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="243dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="48dp"
+            android:fontFamily="@font/chosuncentennial_ttf"
+            android:gravity="center"
+            android:text="회원가입"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintHorizontal_bias="0.352"
+            app:layout_constraintStart_toStartOf="@+id/Login_View"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/singin_edit_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:ems="10"
+            android:hint="아이디"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/singin_edit_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="전화번호"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/singin_edit_pw"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/singin_edit_pw"
+            app:layout_constraintTop_toBottomOf="@+id/singin_edit_pw" />
+
+        <EditText
+            android:id="@+id/singin_edit_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="이름"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/singin_edit_call"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/singin_edit_call"
+            app:layout_constraintTop_toBottomOf="@+id/singin_edit_call" />
+
+        <Button
+            android:id="@+id/singin_btn_singin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@color/PaleTurquoise"
+            android:text="회원가입"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/singin_edit_name"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/singin_edit_name"
+            app:layout_constraintTop_toBottomOf="@+id/singin_edit_name" />
+
+        <EditText
+            android:id="@+id/singin_edit_pw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="비밀번호"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/singin_edit_id"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/singin_edit_id"
+            app:layout_constraintTop_toBottomOf="@+id/singin_edit_id" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="130dp"
+            android:layout_height="71dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Login_View"
+            app:srcCompat="@drawable/signin" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/singin_navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_gravity="start"
+        app:menu="@menu/toolbar_menu"
+        app:headerLayout="@layout/header"/>
+</androidx.drawerlayout.widget.DrawerLayout>
